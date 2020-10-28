@@ -1,22 +1,30 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "makanyengaji",
+  "description": "Aplikasi Mengaji",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build",
-    "export": "sapper export",
-    "start": "node __sapper__/build"
+    "dev": "sapper dev --no-hot",
+    "export": "npm run build:tailwind && sapper export",
+    "start": "node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
+    "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
+    "build:tailwind": "cross-env NODE_ENV=production postcss static/tailwind.css -o static/index.css",
+    "build": "npm run build:tailwind && sapper build"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "compression": "^1.7.1",
     "polka": "next",
-    "sirv": "^1.0.0"
+    "postcss-cli": "^8.1.0",
+    "sirv": "^1.0.0",
+    "tailwindcss": "^1.9.6"
   },
   "devDependencies": {
+    "file-loader": "^6.0.0",
     "sapper": "^0.28.0",
     "svelte": "^3.17.3",
-    "file-loader": "^6.0.0",
     "svelte-loader": "^2.9.0",
     "webpack": "^4.7.0",
     "webpack-modules": "^1.0.0"
