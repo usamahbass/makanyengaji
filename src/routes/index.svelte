@@ -1,59 +1,22 @@
 <script>
-  import successkid from "images/successkid.jpg";
+  import Search from "../components/search.svelte";
+  import { isLoading } from "../store.js";
+
+  isLoading.subscribe((elem) => {
+    console.log(elem);
+  });
 </script>
 
-<style>
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
-
-  figure {
-    margin: 0 0 1em 0;
-  }
-
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
-  }
-
-  p {
-    margin: 1em auto;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
-  }
-</style>
-
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Makanye Ngaji</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<div class="flex flex-wrap">
+  <Search />
 
-<figure>
-  <img alt="Success Kid" src={successkid} />
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p>
-  <strong>Try editing this file (src/routes/index.svelte) to test live
-    reloading.</strong>
-</p>
-<button
-  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-  Button
-</button>
+  {#if $isLoading}
+    <div>loading...</div>
+  {:else}
+    <div>tara..</div>
+  {/if}
+</div>
