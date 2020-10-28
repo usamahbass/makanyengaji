@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
 
-body {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
-}
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";

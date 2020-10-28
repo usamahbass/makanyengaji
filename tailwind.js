@@ -3,7 +3,8 @@ module.exports = {
   purge: [],
   theme: {
     fontFamily: {
-      body: ["Fira Code", "monospace"],
+      body: ["Fira Sans Extra Condensed", "sans-serif"],
+      quran: ["Amiri", "serif"],
     },
     extend: {},
   },
