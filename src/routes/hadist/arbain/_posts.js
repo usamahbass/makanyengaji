@@ -39,7 +39,7 @@ const posts = [
   {
     ke: "5",
     judul: "Larangan Membuat Sesuatu yang Baru dalam Agama",
-    slig: "larangan-membuat-sesuatu-yang-baru-dalam-agama",
+    slug: "larangan-membuat-sesuatu-yang-baru-dalam-agama",
     hadist: `عَنْ أُمِّ الْمُؤْمِنِيْنَ أُمِّ عَبْدِ اللهِ عَائِشَةَ رَضِيَ اللهُ عَنْهَا قَالَتْ: قَالَ رَسُوْلُ اللهِ صَلَّى اللهُ عَلَيْهَ وَسَلَّمَ: “مَنْ أَحْدَثَ فِيْ أَمْرِنَا هَذَا مَا لَيْسَ مِنْهُ فَهُوَ رَدٌّ” رَوَاهُ الْبُخَارِيُّ وَمُسْلِمٌ. وَفِيْ رِوَايَةٍ لِمُسْلِمٍ: “مَنْ عَمِلَ عَمَلاً لَيْسَ عَلَيْهَ أَمْرُنَا فَهُوَ رَدٌّ”`,
     arti: `“Dari Ummul Mukminin, Ummu Abdillah ‘Aisyah radhiyallahu ‘anha, dia berkata: Rasulullah shallallahu ‘alaihi wa sallam bersabda: “Barangsiapa yang (memulai) mengada-adakan (sesuatu yang baru) dalam urusan (agama) kami ini yang bukan termasuk bagian darinya, maka amalan tersebut tertolak.” (HR. Bukhari dan Muslim)[1]
 
