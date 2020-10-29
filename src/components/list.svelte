@@ -6,7 +6,8 @@
 
 <div class="w-full flex flex-wrap flex-col mt-5">
   <a
-    href={`/surah/${href}`}
+    rel=prefetch
+    href={href}
     class="border-b-2 text-2xl mt-5 hover:bg-black hover:text-white">{number}.
     {name}</a>
 </div>

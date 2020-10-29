@@ -19,15 +19,7 @@
 </script>
 
 <script>
-  import { isSaved } from "../../store";
-  import Audio from "../../components/audio.svelte";
-  import ListAyat from "../../components/list-ayat.svelte";
-  import Save from "../../components/save.svelte";
-
-  const savetoStore = () => {
-    $isSaved = [...$isSaved, thisSurah];
-    alert(`surah ${thisSurah.name.transliteration.id} berhasil disimpan`);
-  };
+  import ListTafsir from "../../components/list-tafsir.svelte";
 </script>
 
 <style>
@@ -56,13 +48,6 @@
 
 <ol id="wrapper">
   {#each thisSurah.verses as ayat}
-    <ListAyat
-      ayat={ayat.text.arab}
-      latin={ayat.text.transliteration.en}
-      arti={ayat.translation.id}>
-      <Audio src={ayat.audio.secondary[0]} />
-    </ListAyat>
+    <ListTafsir tafsir={ayat.tafsir.id.long} />
   {/each}
 </ol>
-
-<Save save={savetoStore} />

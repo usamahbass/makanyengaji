@@ -27,6 +27,6 @@
   <slot />
 </main>
 
-<ToggleTheme />
+<Footer />
 
-<!-- <Footer /> -->
+<ToggleTheme />

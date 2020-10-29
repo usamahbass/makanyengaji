@@ -1,5 +1,6 @@
 <script context="module">
   import { base_url } from "../../api";
+  import List from "../../components/list.svelte";
 
   let allSurah = [];
   let loading = true;
@@ -19,12 +20,8 @@
   }
 </script>
 
-<script>
-  import List from "../../components/list.svelte";
-</script>
-
 <svelte:head>
-  <title>Surah - Makanye Ngaji</title>
+  <title>Tafsir Surah - Makanye Ngaji</title>
 </svelte:head>
 
 {#if loading}
@@ -32,7 +29,7 @@
 {:else}
   {#each allSurah as surah}
     <List
-      href={`surah/${surah.number}`}
+      href={`tafsir-surah/${surah.number}`}
       number={surah.number}
       name={surah.name.transliteration.id} />
   {/each}

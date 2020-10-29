@@ -1,7 +1,6 @@
 <style>
   .bg-makanye {
-    box-shadow: rgba(0, 5, 0, 0.2) 0px 2px 4px -1px,
-      rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+    display: block;
   }
 </style>
 
@@ -14,8 +13,28 @@
         href="https://raksyedev.netlify.app"
         target="_blank"
         rel="noopenner noreferrer"
-        class="font-bold">
+        class="font-bold hover:bg-black hover:text-white">
         Raksye
+      </a>
+
+      dengan
+
+      <a
+        href="https://sapper.svelte.dev"
+        target="_blank"
+        rel="noopenner noreferrer"
+        class="font-bold hover:bg-black hover:text-white">
+        Sapper
+      </a>
+
+      dan
+
+      <a
+        href="https://tailwindcss.com"
+        target="_blank"
+        rel="noopenner noreferrer"
+        class="font-bold hover:bg-black hover:text-white">
+        Tailwind
       </a>
     </li>
 
@@ -24,7 +43,7 @@
         href="https://github.com/usamahbass/makanyengaji"
         target="_blank"
         rel="noopenner noreferrer"
-        class="font-bold">
+        class="font-bold hover:bg-black hover:text-white">
         GitHub
       </a>
     </li>

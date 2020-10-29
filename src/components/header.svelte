@@ -10,8 +10,18 @@
       rel: null,
     },
     {
+      title: "Hadist",
+      path: "hadist",
+      rel: "prefetch"
+    },
+    {
       title: "Surah",
       path: "surah",
+      rel: "prefetch",
+    },
+    {
+      title: "Tafsir Surah",
+      path: "tafsir-surah",
       rel: "prefetch",
     },
     {
