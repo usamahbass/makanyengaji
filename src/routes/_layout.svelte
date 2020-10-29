@@ -1,8 +1,14 @@
 <script>
-  import Footer from "../components/footer.svelte";
+  import { appTheme } from "../store";
   import Header from "../components/header.svelte";
+  import Footer from "../components/footer.svelte";
+  import ToggleTheme from "../components/toggle-theme.svelte";
 
   export let segment;
+
+  let temaNow;
+
+  appTheme.subscribe((tema) => (temaNow = tema));
 </script>
 
 <style>
@@ -17,8 +23,10 @@
 
 <Header {segment} />
 
-<main>
+<main class={temaNow === 'gelap' ? 'bg-black text-white' : null}>
   <slot />
 </main>
+
+<ToggleTheme />
 
 <!-- <Footer /> -->

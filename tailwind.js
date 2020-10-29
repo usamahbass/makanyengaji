@@ -6,7 +6,11 @@ module.exports = {
       body: ["Fira Sans Extra Condensed", "sans-serif"],
       quran: ["Amiri", "serif"],
     },
-    extend: {},
+    extend: {
+      screens: {
+        gelap: { raw: "(prefers-color-scheme: gelap)" },
+      },
+    },
   },
   variants: {},
   plugins: [],
