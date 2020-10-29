@@ -19,6 +19,11 @@
       path: "tentang",
       rel: null,
     },
+    {
+      title: "Tersimpan",
+      path: "tersimpan",
+      rel: null,
+    },
   ];
 </script>
 
