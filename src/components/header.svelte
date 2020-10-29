@@ -6,18 +6,28 @@
   const routes = [
     {
       title: "Beranda",
-      path: "/",
+      path: ".",
+      rel: null,
     },
     {
       title: "Surah",
-      path: "/surah",
+      path: "surah",
+      rel: "prefetch",
     },
     {
       title: "Tentang",
-      path: "/tentang",
+      path: "tentang",
+      rel: null,
     },
   ];
 </script>
+
+<style>
+  [aria-current] {
+    background-color: black;
+    color: white;
+  }
+</style>
 
 <header>
   <div
@@ -46,11 +56,12 @@
 
     <ul
       class={`${isExpanded ? `block` : `hidden`} md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto`}>
-      {#each routes as route}
+      {#each routes as route, index}
         <li class="mt-3 md:mt-0 md:ml-6">
           <a
             class="block text-base text-nav hover:bg-black hover:text-white"
-            aria-current={segment === route.path ? 'page' : undefined}
+            rel={route.rel}
+            aria-current={index === 0 ? (segment === undefined ? 'page' : undefined) : segment === route.path ? 'page' : undefined}
             href={route.path}>{route.title}</a>
         </li>
       {/each}
