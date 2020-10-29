@@ -1,23 +1,21 @@
-<script context="module">
-  export function preload() {
-    return this.fetch(`hadist.json`)
-      .then((r) => r.json())
-      .then((items) => {
-        return { items };
-      });
-  }
-</script>
-
 <script>
   import List from "../../components/list.svelte";
 
-  export let items;
+  let hadist = [
+    {
+      id: "1",
+      nama: "Hadist arba`in",
+      path: "hadist/arbain",
+    },
+  ];
 </script>
 
 <svelte:head>
   <title>Hadist - Makanye Ngaji</title>
 </svelte:head>
 
-{#each items as item}
-  <List name={item.judul} href="hadist/{item.slug}" />
+<h1 class="border-b-2 text-2xl font-bold mb-5">Berikut Kumpulan Hadist</h1>
+
+{#each hadist as item}
+  <List number={item.id} name={item.nama} href={item.path} />
 {/each}

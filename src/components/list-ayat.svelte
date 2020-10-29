@@ -25,8 +25,7 @@
 <li class="number-quran block font-quran border-t-2 border-gray-200 py-5">
   <span class="block mt-5 text-right text-3xl leading-loose">{ayat}</span>
   <span class="block font-normal text-lg py-4">{latin}</span>
-  <span
-    class="font-body font-light text-lg hover:bg-black hover:text-white">{arti}</span>
+  <span class="font-body font-light text-lg">{arti}</span>
 
   <slot />
 </li>
