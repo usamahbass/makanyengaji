@@ -1,5 +1,6 @@
 <script context="module">
   import { base_url } from "../../api";
+import Audio from "../../components/audio.svelte";
   import ListAyat from "../../components/list-ayat.svelte";
 
   let thisSurah;
@@ -19,6 +20,12 @@
   }
 </script>
 
+<style>
+  #wrapper {
+    counter-reset: number-quran;
+  }
+</style>
+
 <svelte:head>
   <title>
     {thisSurah.name.transliteration.id}
@@ -27,8 +34,7 @@
   </title>
 </svelte:head>
 
-<div
-  class="flex flex-row flex-wrap justify-center font-quran border-b-2 border-gray-200 ">
+<div class="flex flex-row flex-wrap justify-center font-quran ">
   <h1 class="text-3xl mr-3 hover:bg-black hover:text-white">
     {thisSurah.name.transliteration.id}
   </h1>
@@ -38,6 +44,14 @@
   </h1>
 </div>
 
-{#each thisSurah.verses as ayat}
-  <ListAyat number={ayat.number.inSurah} ayat={ayat.text.arab} />
-{/each}
+<ol id="wrapper">
+  {#each thisSurah.verses as ayat}
+    <ListAyat
+      number={ayat.number.inSurah}
+      ayat={ayat.text.arab}
+      latin={ayat.text.transliteration.en}
+      arti={ayat.translation.id}>
+      <Audio composer={ayat.number.inSurah} title={ayat.number.inSurah} src={ayat.audio.secondary[0]} />
+    </ListAyat>
+  {/each}
+</ol>
