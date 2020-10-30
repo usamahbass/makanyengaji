@@ -1,8 +1,16 @@
 <script>
+  import { derived } from "svelte/store";
+  import { stores } from "@sapper/app";
   import { appTheme } from "../store";
   import Header from "../components/header.svelte";
   import Footer from "../components/footer.svelte";
   import ToggleTheme from "../components/toggle-theme.svelte";
+
+  const { preloading } = stores();
+
+  const delayedPreloading = derived(preloading, (currentPreloading, set) => {
+    setTimeout(() => set(currentPreloading), 250);
+  });
 
   export let segment;
 
@@ -24,6 +32,9 @@
 <Header {segment} />
 
 <main class={temaNow === 'gelap' ? 'bg-black text-white' : null}>
+  {#if $preloading && $delayedPreloading}
+    <div>loading...</div>
+  {/if}
   <slot />
 </main>
 

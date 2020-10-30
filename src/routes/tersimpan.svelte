@@ -16,7 +16,7 @@
     Data Tersimpan Masih Kosong
   </h1>
 
-  <p class="mt-5 hover:bg-black hover:text-white">
+  <p class="mt-5">
     Untuk menyimpan data surah, antum bisa pergi ke halaman surah dan klik
     simpan di pojok kanan. Otomatis data akan tersimpan disini,
     Barakallahufiikum.
@@ -25,7 +25,7 @@
   {#each tersimpan as surah}
     <List
       number={surah.number}
-      href={surah.number}
+      href="surah/{surah.number}"
       name={surah.name.transliteration.id} />
   {/each}
 {/if}

@@ -10,12 +10,13 @@
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
     "watch:tailwind": "postcss static/global.css -o static/index.css -w",
-    "build:tailwind": "cross-env NODE_ENV=production postcss static/tailwind.css -o static/index.css",
+    "build:tailwind": "cross-env NODE_ENV=production postcss static/global.css -o static/index.css",
     "build": "npm run build:tailwind && sapper build"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "compression": "^1.7.1",
+    "cross-env": "^7.0.2",
     "idb": "^5.0.7",
     "polka": "next",
     "postcss-cli": "^8.1.0",

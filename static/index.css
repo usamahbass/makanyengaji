@@ -19194,6 +19194,24 @@ video {
   animation: bounce 1s infinite;
 }
 
+.hover-makanye {
+  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.hover-makanye:hover {
+  box-shadow: inset 0 -1.5em 0 black;
+  color: #fff;
+}
+
+.hover-makanye-black {
+  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.hover-makanye-black:hover {
+  box-shadow: inset 0 -1.5em 0 #fff;
+  color: black;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;

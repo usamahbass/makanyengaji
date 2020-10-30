@@ -1,11 +1,11 @@
-import posts from "./_posts.js";
+import hadist from "./_hadist.js";
 
 const contents = JSON.stringify(
-  posts.map((post) => {
+  hadist.map((item) => {
     return {
-      ke: post.ke,
-      judul: post.judul,
-      slug: post.slug,
+      id: item.id,
+      nama_hadist: item.nama_hadist,
+      path: item.path,
     };
   })
 );

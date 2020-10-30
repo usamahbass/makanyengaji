@@ -13,7 +13,7 @@
         href="https://raksyedev.netlify.app"
         target="_blank"
         rel="noopenner noreferrer"
-        class="font-bold hover:bg-black hover:text-white">
+        class="font-bold hover-makanye">
         Raksye
       </a>
 
@@ -23,7 +23,7 @@
         href="https://sapper.svelte.dev"
         target="_blank"
         rel="noopenner noreferrer"
-        class="font-bold hover:bg-black hover:text-white">
+        class="font-bold hover-makanye">
         Sapper
       </a>
 
@@ -33,7 +33,7 @@
         href="https://tailwindcss.com"
         target="_blank"
         rel="noopenner noreferrer"
-        class="font-bold hover:bg-black hover:text-white">
+        class="font-bold hover-makanye">
         Tailwind
       </a>
     </li>
@@ -43,7 +43,7 @@
         href="https://github.com/usamahbass/makanyengaji"
         target="_blank"
         rel="noopenner noreferrer"
-        class="font-bold hover:bg-black hover:text-white">
+        class="font-bold hover-makanye">
         GitHub
       </a>
     </li>

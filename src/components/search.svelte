@@ -12,7 +12,7 @@
 
     if (values > 114) {
       alert(`mana ada surah ke ${values}`);
-      isLoading.set(false)
+      isLoading.set(false);
     } else {
       fetch(`${base_url}/surah/${values}`)
         .then((res) => {
@@ -36,7 +36,6 @@
     id="search-input"
     type="number"
     autocomplete="off"
-    value={values}
-    on:change={(e) => (values = e.target.value)}
+    bind:value={values}
     placeholder="Cari surah ke  ..." />
 </form>

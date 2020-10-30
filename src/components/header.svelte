@@ -12,7 +12,7 @@
     {
       title: "Hadist",
       path: "hadist",
-      rel: "prefetch"
+      rel: "prefetch",
     },
     {
       title: "Surah",
@@ -50,7 +50,7 @@
     <div class="flex items-center">
       <!-- icon -->
       <a
-        class="text-2xl font-bold text-nav"
+        class="text-2xl font-bold text-nav hover-makanye"
         aria-current={segment === undefined ? 'page' : undefined}
         href=".">
         Makanye Ngaji
@@ -74,7 +74,7 @@
       {#each routes as route, index}
         <li class="mt-3 md:mt-0 md:ml-6">
           <a
-            class="block text-base text-nav hover:bg-black hover:text-white"
+            class="block text-base text-nav hover-makanye"
             rel={route.rel}
             aria-current={index === 0 ? (segment === undefined ? 'page' : undefined) : segment === route.path ? 'page' : undefined}
             href={route.path}>{route.title}</a>
