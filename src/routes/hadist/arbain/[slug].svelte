@@ -22,9 +22,9 @@
 </svelte:head>
 
 <div class="flex flex-row flex-wrap justify-center font-quran ">
-  <h1 class="text-3xl mr-3 hover:bg-black hover:text-white">{item.judul}</h1>
-  <span class="text-3xl hover:bg-black hover:text-white">-</span>
-  <h1 class="text-3xl ml-3 hover:bg-black hover:text-white">
+  <h1 class="text-3xl mr-3 hover-makanye">{item.judul}</h1>
+  <span class="text-3xl hover-makanye">-</span>
+  <h1 class="text-3xl ml-3 hover-makanye">
     Hadist ke
     {item.ke}
   </h1>
