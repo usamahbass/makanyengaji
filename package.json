@@ -1,7 +1,9 @@
 {
   "name": "makanyengaji",
-  "description": "Aplikasi Mengaji",
+  "description": "adalah platform qur'an digital yang dibuat dengan tujuan menyadarkan kaum muslim khususnya di Indonesia untuk membiasakan ngaji setiap hari. Dan juga kaum muslim yang sedang tidak tenang hatinya , ditegur 'Makanye Ngaji' agar tenang.",
   "version": "0.0.1",
+  "author": "usamahbass",
+  "license": "MIT",
   "scripts": {
     "dev": "sapper dev --no-hot",
     "export": "npm run build:tailwind && sapper export",
