@@ -1,36 +1,26 @@
-body {
-	margin: 0;
-	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	color: #333;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+.hover-makanye {
+  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
-	font-weight: 400;
-	line-height: 1.2;
+.hover-makanye:hover {
+  box-shadow: inset 0 -1.5em 0 black;
+  color: #fff;
 }
 
-h1 {
-	font-size: 2em;
+.hover-makanye-black {
+  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-a {
-	color: inherit;
-}
-
-code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
-	color: #555;
-	background-color: #f0f0f0;
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
-}
-
-@media (min-width: 400px) {
-	body {
-		font-size: 16px;
-	}
+.hover-makanye-black:hover {
+  box-shadow: inset 0 -1.5em 0 #fff;
+  color: black;
 }
