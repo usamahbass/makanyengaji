@@ -1,5 +1,6 @@
 <script>
   import { isSaved } from "../store.js";
+  import Seo from "../components/seo.svelte";
   import List from "../components/list.svelte";
 
   let tersimpan = [];
@@ -7,32 +8,11 @@
   isSaved.subscribe((saved) => (tersimpan = saved));
 </script>
 
-<svelte:head>
-  <!-- Primary Meta Tags -->
-  <title>Tersimpan - Makanye Ngaji</title>
-  <meta name="title" content="Tersimpan - Makanye Ngaji" />
-  <meta
-    name="description"
-    content="adalah platform qur'an digital yang dibuat dengan tujuan menyadarkan kaum muslim khususnya di Indonesia untuk membiasakan ngaji setiap hari. Dan juga kaum muslim yang sedang tidak tenang hatinya , ditegur 'Makanye Ngaji' agar tenang." />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://makanyengaji.vercel.app/" />
-  <meta property="og:title" content="Tersimpan - Makanye Ngaji" />
-  <meta
-    property="og:description"
-    content="adalah platform qur'an digital yang dibuat dengan tujuan menyadarkan kaum muslim khususnya di Indonesia untuk membiasakan ngaji setiap hari. Dan juga kaum muslim yang sedang tidak tenang hatinya , ditegur 'Makanye Ngaji' agar tenang." />
-  <meta property="og:image" content="/quran.png" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://makanyengaji.vercel.app/" />
-  <meta property="twitter:title" content="Tersimpan - Makanye Ngaji" />
-  <meta
-    property="twitter:description"
-    content="adalah platform qur'an digital yang dibuat dengan tujuan menyadarkan kaum muslim khususnya di Indonesia untuk membiasakan ngaji setiap hari. Dan juga kaum muslim yang sedang tidak tenang hatinya , ditegur 'Makanye Ngaji' agar tenang." />
-  <meta property="twitter:image" content="/quran.png" />
-</svelte:head>
+<Seo
+  title="Tersimpan - Makanye Ngaji"
+  description="adalah platform qur'an digital yang dibuat dengan tujuan menyadarkan kaum muslim khususnya di Indonesia untuk membiasakan ngaji setiap hari. Dan juga kaum muslim yang sedang tidak tenang hatinya , ditegur 'Makanye Ngaji' agar tenang."
+  url="https://makanyengaji.vercel.app/tersimpan"
+  type="website" />
 
 <div class="h-screen">
   {#if tersimpan <= 0}

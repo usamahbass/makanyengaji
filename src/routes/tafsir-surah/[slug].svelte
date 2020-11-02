@@ -24,6 +24,7 @@
 
 <script>
   import ListTafsir from "../../components/list-tafsir.svelte";
+  import Seo from "../../components/seo.svelte";
 
   export let slugs;
 </script>
@@ -34,51 +35,13 @@
   }
 </style>
 
-<svelte:head>
-  <title>
-    {thisSurah.name.transliteration.id}
-    -
-    {thisSurah.name.translation.id}
-  </title>
-  <meta
-    name="title"
-    content="{thisSurah.name.transliteration.id}
-    -
-    {thisSurah.name.translation.id}" />
-  <meta
-    name="description"
-    content="berikut kumpulan tafsir surah dari surah {thisSurah.name.transliteration.id}" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:url"
-    content="https://makanyengaji.vercel.app/tafsir-surah/{slugs}" />
-  <meta
-    property="og:title"
-    content="{thisSurah.name.transliteration.id}
-    -
-    {thisSurah.name.translation.id}" />
-  <meta
-    property="og:description"
-    content="berikut kumpulan tafsir surah dari surah {thisSurah.name.transliteration.id}" />
-  <meta property="og:image" content="/quran.png" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta
-    property="twitter:url"
-    content="https://makanyengaji.vercel.app/tafsir-surah/{slugs}" />
-  <meta
-    property="twitter:title"
-    content="{thisSurah.name.transliteration.id}
-    -
-    {thisSurah.name.translation.id}" />
-  <meta
-    property="twitter:description"
-    content="berikut kumpulan tafsir surah dari surah {thisSurah.name.transliteration.id}" />
-  <meta property="twitter:image" content="/quran.png" />
-</svelte:head>
+<Seo
+  title="{thisSurah.name.transliteration.id}
+-
+{thisSurah.name.translation.id}"
+  description="berikut kumpulan tafsir surah dari surah {thisSurah.name.transliteration.id}"
+  url="https://makanyengaji.vercel.app/tafsir-surah/{slugs}"
+  type="blog" />
 
 <div class="flex flex-row flex-wrap justify-center font-quran ">
   <h1 class="text-3xl mr-3 hover:bg-black hover:text-white">
