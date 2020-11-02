@@ -5,6 +5,7 @@
   import Header from "../components/header.svelte";
   import Footer from "../components/footer.svelte";
   import ToggleTheme from "../components/toggle-theme.svelte";
+  import BackTop from "../components/back-top.svelte";
 
   const { preloading } = stores();
 
@@ -32,7 +33,8 @@
   }
 </style>
 
-<div class="h-full {temaNow === 'gelap' ? 'bg-makanye-black text-white' : null}">
+<div
+  class="h-full {temaNow === 'gelap' ? 'bg-makanye-black text-white' : null}">
   <Header {segment} />
 
   <main>
@@ -46,3 +48,5 @@
 </div>
 
 <ToggleTheme />
+
+<BackTop />

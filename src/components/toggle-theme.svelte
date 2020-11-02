@@ -25,7 +25,7 @@
   button {
     width: 50px;
     height: 50px;
-    bottom: 15%;
+    bottom: 20%;
     right: 5%;
   }
 

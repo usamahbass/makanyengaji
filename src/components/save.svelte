@@ -7,7 +7,7 @@
   button {
     width: 50px;
     height: 50px;
-    bottom: 30%;
+    bottom: 35%;
     right: 5%;
   }
 

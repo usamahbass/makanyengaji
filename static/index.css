@@ -19194,6 +19194,12 @@ video {
   animation: bounce 1s infinite;
 }
 
+*,
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .hover-makanye {
   transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
