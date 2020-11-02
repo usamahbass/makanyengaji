@@ -21,7 +21,8 @@
     "polka": "next",
     "postcss-cli": "^8.1.0",
     "sirv": "^1.0.0",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^1.9.6",
+    "vercel-sapper": "^0.43.0"
   },
   "devDependencies": {
     "file-loader": "^6.0.0",

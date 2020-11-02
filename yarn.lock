@@ -75,6 +75,11 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@vercel/node-bridge@^1.3.0":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-1.3.1.tgz#6f896493b3a1a21e38c8733cfb7aacb5e4f8f8bd"
+  integrity sha512-bKE7Z1haZuJAtsnrBUM6Bmm9uhRIavMdXXkat4w0RKzjLXgfjW+vvtm/J8xQUSuseOXf1sEC9345IcB5XwynRA==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -1338,7 +1343,7 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-extra@^8.0.0:
+fs-extra@^8.0.0, fs-extra@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
@@ -3414,6 +3419,14 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+vercel-sapper@^0.43.0:
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/vercel-sapper/-/vercel-sapper-0.43.0.tgz#5128884f2e91fe16a1ffb232aeab5528bb1ea94b"
+  integrity sha512-LRZ+mNDPVgNfoPcdIPbM9u8vnw+cLsZhw2s6mHJkvnKPMiSYs84sMEinm8E88smhyYZMebVEjaC5gJanpuGjEg==
+  dependencies:
+    "@vercel/node-bridge" "^1.3.0"
+    fs-extra "^8.1.0"
 
 vm-browserify@^1.0.1:
   version "1.1.2"
