@@ -15,6 +15,10 @@
     } else {
       this.error(404, "Halaman Tidak Ditemukan !");
     }
+
+    return {
+      slugs: slug,
+    };
   }
 </script>
 
@@ -28,6 +32,8 @@
     $isSaved = [...$isSaved, thisSurah];
     alert(`surah ${thisSurah.name.transliteration.id} berhasil disimpan`);
   };
+
+  export let slugs;
 </script>
 
 <style>
@@ -42,6 +48,44 @@
     -
     {thisSurah.name.translation.id}
   </title>
+  <meta
+    name="title"
+    content="{thisSurah.name.transliteration.id}
+    -
+    {thisSurah.name.translation.id}" />
+  <meta
+    name="description"
+    content="berikut kumpulan ayat dari surah {thisSurah.name.transliteration.id}" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://makanyengaji.vercel.app/surah/{slugs}" />
+  <meta
+    property="og:title"
+    content="{thisSurah.name.transliteration.id}
+    -
+    {thisSurah.name.translation.id}" />
+  <meta
+    property="og:description"
+    content="berikut kumpulan ayat dari surah {thisSurah.name.transliteration.id}" />
+  <meta property="og:image" content="/quran.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta
+    property="twitter:url"
+    content="https://makanyengaji.vercel.app/surah/{slugs}" />
+  <meta
+    property="twitter:title"
+    content="{thisSurah.name.transliteration.id}
+    -
+    {thisSurah.name.translation.id}" />
+  <meta
+    property="twitter:description"
+    content="berikut kumpulan ayat dari surah {thisSurah.name.transliteration.id}" />
+  <meta property="twitter:image" content="/quran.png" />
 </svelte:head>
 
 <div class="flex flex-row flex-wrap justify-center font-quran ">

@@ -20,6 +20,9 @@
 </script>
 
 <style>
+  .bg-makanye-black {
+    background-color: #1a202c;
+  }
   main {
     position: relative;
     max-width: 56em;
@@ -29,15 +32,17 @@
   }
 </style>
 
-<Header {segment} />
+<div class="h-screen {temaNow === 'gelap' ? 'bg-makanye-black text-white' : null}">
+  <Header {segment} />
 
-<main class={temaNow === 'gelap' ? 'bg-black text-white' : null}>
-  {#if $preloading && $delayedPreloading}
-    <div>loading...</div>
-  {/if}
-  <slot />
-</main>
+  <main>
+    {#if $preloading && $delayedPreloading}
+      <div>loading...</div>
+    {/if}
+    <slot />
+  </main>
 
-<Footer />
+  <Footer />
+</div>
 
 <ToggleTheme />
