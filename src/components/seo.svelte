@@ -23,9 +23,9 @@
   <meta property="og:url" content={url} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="https://makanyengaji.vercel.app/favicon.png" />
-  <meta property="og:image:url" content="https://makanyengaji.vercel.app/favicon.png" />
-  <meta property="og:image:secure_url" content="https://makanyengaji.vercel.app/favicon.png" />
+  <meta property="og:image" content="https://makanyengaji.vercel.app/logo-512.png" />
+  <meta property="og:image:url" content="https://makanyengaji.vercel.app/logo-512.png" />
+  <meta property="og:image:secure_url" content="https://makanyengaji.vercel.app/logo-512.png" />
   <meta property="og:image:type" content="image/png" />
 
   <!-- Twitter -->
@@ -33,7 +33,7 @@
   <meta property="twitter:url" content={url} />
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
-  <meta property="twitter:image" content="https://makanyengaji.vercel.app/favicon.png" />
+  <meta property="twitter:image" content="https://makanyengaji.vercel.app/logo-512.png" />
   <meta property="twitter:creator" content="@usamahbass" />
   <meta property="twitter:site" content="@usamahbass" />
 </svelte:head>
