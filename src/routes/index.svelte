@@ -53,41 +53,43 @@
   <meta property="twitter:image" content="/quran.png" />
 </svelte:head>
 
-<div class="flex flex-wrap mt-5">
-  <span
-    class="m-auto text-3xl bg-black text-white font-bold hover-makanye-black mb-5">
-    Udeh ngaji belom hari ini?
-  </span>
+<div class="h-screen">
+  <div class="flex flex-wrap mt-5">
+    <span
+      class="m-auto text-3xl bg-black text-white font-bold hover-makanye-black mb-5">
+      Udeh ngaji belom hari ini?
+    </span>
 
-  <Search />
+    <Search />
 
-  {#if $isLoading}
-    <p class="m-auto">sedang mencari , sabar yak ...</p>
-  {:else if Object.values($isSurah).length === 0}
-    <div />
-  {:else}
-    <List
-      number={surah.number}
-      href="surah/{surah.number}"
-      name={surah.name.transliteration.id} />
-  {/if}
-</div>
+    {#if $isLoading}
+      <p class="m-auto">sedang mencari , sabar yak ...</p>
+    {:else if Object.values($isSurah).length === 0}
+      <div />
+    {:else}
+      <List
+        number={surah.number}
+        href="surah/{surah.number}"
+        name={surah.name.transliteration.id} />
+    {/if}
+  </div>
 
-<div class="flex flex-wrap mt-10">
-  <span
-    class="m-auto text-3xl bg-black text-white font-bold hover-makanye-black mb-5">
-    Udeh baca hadist belom hari ini?
-  </span>
+  <div class="flex flex-wrap mt-10">
+    <span
+      class="m-auto text-3xl bg-black text-white font-bold hover-makanye-black mb-5">
+      Udeh baca hadist belom hari ini?
+    </span>
 
-  <SearchHadist />
+    <SearchHadist />
 
-  {#if hadist.length <= 0}
-    <div />
-  {:else}
-    <div class="w-full relative b-0 border-l-2 border-r-2">
-      {#each hadist as item}
-        <List number={item.id} href={item.path} name={item.nama_hadist} />
-      {/each}
-    </div>
-  {/if}
+    {#if hadist.length <= 0}
+      <div />
+    {:else}
+      <div class="w-full relative b-0 border-l-2 border-r-2">
+        {#each hadist as item}
+          <List number={item.id} href={item.path} name={item.nama_hadist} />
+        {/each}
+      </div>
+    {/if}
+  </div>
 </div>

@@ -42,8 +42,10 @@
   <meta property="twitter:image" content="/quran.png" />
 </svelte:head>
 
-<h1 class="border-b-2 text-2xl font-bold mb-5">Berikut Kumpulan Hadist</h1>
+<div class="h-screen">
+  <h1 class="border-b-2 text-2xl font-bold mb-5">Berikut Kumpulan Hadist</h1>
 
-{#each allhadist as item}
-  <List number={item.id} name={item.nama_hadist} href={item.path} />
-{/each}
+  {#each allhadist as item}
+    <List number={item.id} name={item.nama_hadist} href={item.path} />
+  {/each}
+</div>

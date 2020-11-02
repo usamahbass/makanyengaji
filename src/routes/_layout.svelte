@@ -32,7 +32,7 @@
   }
 </style>
 
-<div class="h-screen {temaNow === 'gelap' ? 'bg-makanye-black text-white' : null}">
+<div class="h-full {temaNow === 'gelap' ? 'bg-makanye-black text-white' : null}">
   <Header {segment} />
 
   <main>

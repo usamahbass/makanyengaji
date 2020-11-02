@@ -34,21 +34,23 @@
   <meta property="twitter:image" content="/quran.png" />
 </svelte:head>
 
-{#if tersimpan <= 0}
-  <h1 class="border-b-2 text-2xl font-bold mb-5">
-    Data Tersimpan Masih Kosong
-  </h1>
+<div class="h-screen">
+  {#if tersimpan <= 0}
+    <h1 class="border-b-2 text-2xl font-bold mb-5">
+      Data Tersimpan Masih Kosong
+    </h1>
 
-  <p class="mt-5">
-    Untuk menyimpan data surah, antum bisa pergi ke halaman surah dan klik
-    simpan di pojok kanan. Otomatis data akan tersimpan disini,
-    Barakallahufiikum.
-  </p>
-{:else}
-  {#each tersimpan as surah}
-    <List
-      number={surah.number}
-      href="surah/{surah.number}"
-      name={surah.name.transliteration.id} />
-  {/each}
-{/if}
+    <p class="mt-5">
+      Untuk menyimpan data surah, antum bisa pergi ke halaman surah dan klik
+      simpan di pojok kanan. Otomatis data akan tersimpan disini,
+      Barakallahufiikum.
+    </p>
+  {:else}
+    {#each tersimpan as surah}
+      <List
+        number={surah.number}
+        href="surah/{surah.number}"
+        name={surah.name.transliteration.id} />
+    {/each}
+  {/if}
+</div>
