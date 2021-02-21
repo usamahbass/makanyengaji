@@ -31,25 +31,28 @@
 
   const savetoStore = () => {
     $isSaved = [...$isSaved, thisSurah];
+
+    let arr = [];
+
+    arr = $isSaved.concat(JSON.parse(localStorage.getItem("isSaved") || "[]"));
+
+    localStorage.setItem("isSaved", JSON.stringify(arr));
+
     alert(`surah ${thisSurah.name.transliteration.id} berhasil disimpan`);
   };
 
   export let slugs;
 </script>
 
-<style>
-  #wrapper {
-    counter-reset: number-quran;
-  }
-</style>
-
 <Seo
   title="{thisSurah.name.transliteration.id}
 -
 {thisSurah.name.translation.id}"
-  description="berikut kumpulan ayat dari surah {thisSurah.name.transliteration.id}"
+  description="berikut kumpulan ayat dari surah {thisSurah.name.transliteration
+    .id}"
   url="https://makanyengaji.vercel.app/surah/{slugs}"
-  type="blog" />
+  type="blog"
+/>
 
 <div class="flex flex-row flex-wrap justify-center font-quran ">
   <h1 class="text-3xl mr-3 hover:bg-black hover:text-white">
@@ -66,10 +69,17 @@
     <ListAyat
       ayat={ayat.text.arab}
       latin={ayat.text.transliteration.en}
-      arti={ayat.translation.id}>
+      arti={ayat.translation.id}
+    >
       <Audio src={ayat.audio.secondary[0]} />
     </ListAyat>
   {/each}
 </ol>
 
 <Save save={savetoStore} />
+
+<style>
+  #wrapper {
+    counter-reset: number-quran;
+  }
+</style>
