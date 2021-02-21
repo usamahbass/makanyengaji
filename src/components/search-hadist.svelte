@@ -2,7 +2,7 @@
   import { isHadist, isSearch } from "../store.js";
 
   async function handleResult() {
-    const res = await fetch("http://localhost:3000/hadist.json");
+    const res = await fetch("https://makanyengaji.vercel.app/hadist.json");
 
     const result = await res.json();
 

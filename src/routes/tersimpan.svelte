@@ -2,17 +2,26 @@
   import { isSaved } from "../store.js";
   import Seo from "../components/seo.svelte";
   import List from "../components/list.svelte";
+  import Delete from "../components/delete.svelte";
 
   let tersimpan = [];
 
   isSaved.subscribe((saved) => (tersimpan = saved));
+
+  const deleteAll = () => {
+    if (window.confirm("Semua yang tersimpan akan dihapus, yakin ?")) {
+      $isSaved = [];
+      localStorage.removeItem("isSaved");
+    }
+  };
 </script>
 
 <Seo
   title="Tersimpan - Makanye Ngaji"
   description="adalah platform qur'an digital yang dibuat dengan tujuan menyadarkan kaum muslim khususnya di Indonesia untuk membiasakan ngaji setiap hari. Dan juga kaum muslim yang sedang tidak tenang hatinya , ditegur 'Makanye Ngaji' agar tenang."
   url="https://makanyengaji.vercel.app/tersimpan"
-  type="website" />
+  type="website"
+/>
 
 <div class="h-screen">
   {#if tersimpan <= 0}
@@ -30,7 +39,10 @@
       <List
         number={surah.number}
         href="surah/{surah.number}"
-        name={surah.name.transliteration.id} />
+        name={surah.name.transliteration.id}
+      />
     {/each}
   {/if}
 </div>
+
+<Delete handleDelete={deleteAll} />
