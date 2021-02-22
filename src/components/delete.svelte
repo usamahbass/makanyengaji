@@ -30,8 +30,7 @@
       y2="17"
     />
    <title>Hapus Semua</title>
-</svg
-  >
+</svg/>
 </button>
 
 <style>
