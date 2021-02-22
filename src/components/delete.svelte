@@ -28,7 +28,9 @@
       y1="11"
       x2="14"
       y2="17"
-    /></svg
+    />
+   <title>Hapus Semua</title>
+</svg
   >
 </button>
 
